@@ -1,7 +1,7 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 import Notiflix from "notiflix";
-
+startBtn.disabled = true;
 
 const currentDate = new Date()
 const options = {
