@@ -33,14 +33,15 @@ const options = {
   
   const fp = flatpickr("#datetime-picker", options); 
   
-  const selectedDate = fp.selectedDates[0]
+  
   
   startBtn.addEventListener("click" , startTimer)
 
    function startTimer () {
+    const selectedDate = fp.selectedDates[0]
     const id = setInterval( () => {
         const current = new Date()
-        const timerTime = convertMs(usersDate - current)
+        const timerTime = convertMs(selectedDate - current)
         if (timerTime.seconds >= 0) {
             daysEl.textContent = timerTime.days.toString().padStart(2, "0")
             hoursEl.textContent = timerTime.hours.toString().padStart(2, "0")
